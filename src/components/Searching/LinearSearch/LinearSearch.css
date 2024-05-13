@@ -1,0 +1,479 @@
+/* Light mode styles */
+/* Light mode styles */
+.linear-search-page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    color: #333; /* Text color for light mode */
+    transition: background-color 0.5s, color 0.5s; /* Smooth transition for background and text color */
+  }
+  
+  .page-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333; /* Darken the text color */
+  }
+  
+  .section-box {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    transition: transform 0.3s ease-in-out; /* Smooth transform on hover */
+  }
+  
+  .section-box:hover {
+    transform: translateY(-5px); /* Move box up on hover */
+  }
+  
+  .section-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333; /* Darken the text color */
+  }
+  
+  .highlight {
+    color: #007bff;
+    font-weight: bold;
+  }
+  
+  .code-editor {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    overflow-x: auto;
+    margin-bottom: 10px;
+    font-family: monospace;
+  }
+  
+  .code-editor code {
+    font-size: 0.9rem;
+  }
+  
+  .section-box p {
+    line-height: 1.6;
+  }
+  
+  .section-box ol {
+    padding-left: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .section-box ul {
+    padding-left: 20px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .section-box li {
+    margin-bottom: 5px;
+  }
+  
+  .section-box strong {
+    font-weight: bold;
+  }
+  
+  .iframe-container {
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+  }
+  
+  .iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* Adjust the font size based on screen width */
+  @media screen and (max-width: 768px) {
+    .section-box .language-python {
+      font-size: 12px; /* Adjust the font size as needed */
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .section-box .language-python {
+      font-size: 10px; /* Adjust the font size as needed */
+    }
+  }
+  
+  /* Keyframes for fade in animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  /* Dark mode styles */
+.dark-mode {
+    --background-color: #333;
+    --text-color: #fff;
+  }
+  /* Dark mode styles */
+.dark-mode .linear-search-page {
+    background-color: #333;
+    color: #fff; /* Text color for dark mode */
+  }
+  
+  .dark-mode .page-title,
+  .dark-mode .section-title {
+    color: var(--text-color);
+  }
+  
+  /* Dark mode styles for section boxes */
+.dark-mode .section-box {
+    background-color: #444; /* Darker background color for sections */
+    color: #fff; /* Text color for sections in dark mode */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Darker shadow for sections */
+  }
+  
+  .dark-mode .code-editor {
+    background-color: #222;
+    color: #fff;
+  }
+  
+  .dark-mode .highlight {
+    color: #007bff;
+    font-weight: bold;
+  }
+
+  /* Add this to the end of your CSS file */
+  .dark-mode-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+  }
+
+.toggle {
+  width: 40px;
+  height: 20px;
+  border-radius: 10px;
+  background-color: #ddd;
+  position: relative;
+  transition: background-color 0.3s ease;
+}
+
+.toggle-on {
+  background-color: #333;
+}
+
+.icons {
+  display: flex;
+  justify-content: space-between;
+  width: 30px;
+  margin-top: 1px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.icons i {
+  color: #fff;
+}
+
+/* Dark mode styles */
+.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+
+.dark-mode .section-box {
+  background-color: #444;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.dark-mode .page-title {
+  color: #fff;
+}
+
+/* Fancy Toggle Styles */
+.toggle {
+  background-color: #ddd;
+  border-radius: 20px;
+  position: relative;
+  height: 30px;
+  width: 60px;
+  overflow: hidden;
+}
+
+.toggle-on {
+  background-color: #333;
+}
+
+.toggle::before {
+  content: '';
+  position: absolute;
+  height: 26px;
+  width: 26px;
+  border-radius: 50%;
+  background-color: #fff;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.3s ease;
+}
+
+.toggle-on::before {
+  transform: translateY(-50%) translateX(30px);
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 200%;
+  transition: transform 0.3s ease;
+}
+
+.dark-mode .icons {
+  transform: translateX(-50%);
+}
+
+/* Your existing styles here */
+
+/* Add this to the end of your CSS file */
+
+/* Fancy Toggle Styles */
+.toggle {
+    background-color: #ddd;
+    border-radius: 20px;
+    position: relative;
+    height: 30px;
+    width: 60px;
+    overflow: hidden;
+    transition: background-color 0.3s;
+    cursor: pointer;
+  }
+  
+  .toggle-on {
+    background-color: #333;
+  }
+  
+  .toggle::before {
+    content: '';
+    position: absolute;
+    height: 26px;
+    width: 26px;
+    border-radius: 50%;
+    background-color: #fff;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.3s;
+  }
+  
+  .toggle-on::before {
+    transform: translateY(-50%) translateX(30px);
+  }
+  
+  .icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 200%;
+    transition: transform 0.3s;
+  }
+  
+  .dark-mode .icons {
+    transform: translateX(-50%);
+  }
+  
+  /* Additional 3D effect */
+  .section-box {
+    position: relative;
+    perspective: 1000px;
+    transition: transform 0.5s;
+  }
+  
+  .section-box:hover {
+    transform: rotateY(5deg) scale(1.05);
+  }
+  
+  .section-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333; /* Darken the text color */
+  }
+  
+  .section-box p {
+    line-height: 1.6;
+  }
+  
+  .section-box ol {
+    padding-left: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .section-box ul {
+    padding-left: 20px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .section-box li {
+    margin-bottom: 5px;
+  }
+  
+  .section-box strong {
+    font-weight: bold;
+  }
+  
+  /* Dark mode styles */
+  .dark-mode .section-box {
+    background-color: #444;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+/* Fancy Toggle Styles */
+.toggle {
+    background-color: #ddd;
+    border-radius: 20px;
+    position: relative;
+    height: 30px;
+    width: 60px;
+    overflow: hidden;
+    transition: background-color 0.3s;
+    cursor: pointer;
+  }
+  
+  .toggle-on {
+    background-color: #333;
+  }
+  
+  .toggle::before {
+    content: '';
+    position: absolute;
+    height: 26px;
+    width: 26px;
+    border-radius: 50%;
+    background-color: #fff;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.3s;
+  }
+  
+  .toggle-on::before {
+    transform: translateY(-50%) translateX(30px);
+  }
+  
+  .icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 200%;
+    transition: transform 0.3s;
+  }
+  
+  .dark-mode .icons {
+    transform: translateX(-50%);
+  }
+  
+  /* Additional 3D effect */
+  .section-box {
+    position: relative;
+    perspective: 1000px;
+    transition: transform 0.5s;
+  }
+  
+  .section-box:hover {
+    transform: rotateY(5deg) scale(1.05);
+  }
+  
+  .section-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333; /* Darken the text color */
+  }
+  
+  .section-box p {
+    line-height: 1.6;
+  }
+  
+  .section-box ol {
+    padding-left: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .section-box ul {
+    padding-left: 20px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .section-box li {
+    margin-bottom: 5px;
+  }
+  
+  .section-box strong {
+    font-weight: bold;
+  }
+  
+  /* Dark mode styles */
+  .dark-mode .section-box {
+    background-color: #444;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Updated Title Styling */
+  .page-title {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333; /* Darken the text color */
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: bold;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  }
+  
+ /* Add this to the end of your CSS file */
+
+ .section-box {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .back-button-container {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .back-button {
+    padding: 10px 20px;
+    background-color: inherit; /* Use the background color of the parent */
+    color: inherit; /* Use the text color of the parent */
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .back-button:hover {
+    background-color: #808080; /* Change to a slightly lighter shade on hover */
+    transform: scale(1.05);
+  }
+  
+  .back-button:active {
+    transform: scale(0.95);
+  }
+
+  
+  
+  /* Add this to the end of your CSS file */

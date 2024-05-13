@@ -1,0 +1,26 @@
+.homepage {
+    text-align: center;
+    padding: 50px;
+  }
+  
+  .categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  
+  .category-box {
+    background-color: #8a2be2; /* Purple color */
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+  
+  .category-box:hover {
+    background-color: #6a1c9a; /* Darker purple on hover */
+  }
+  
