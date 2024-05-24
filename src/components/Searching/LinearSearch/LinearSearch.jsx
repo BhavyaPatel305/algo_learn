@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { dracula } from 'react-syntax-highlighter/dist/esm/styles/prism'; // Choose the Dracula style
-
+import { Helmet } from 'react-helmet';
 
 import './LinearSearch.css'; // Assume you have a shared CSS file for category pages
 
@@ -59,6 +59,10 @@ else:
 
   return (
     <div className={`linear-search-page ${darkMode ? 'dark-mode' : ''}`}>
+      <Helmet>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3793431891765309"
+          crossorigin="anonymous"></script>
+      </Helmet>
       <div className="dark-mode-toggle" onClick={toggleDarkMode}>
         <div className={`toggle ${darkMode ? 'toggle-on' : ''}`}>
           <div className="icons">
