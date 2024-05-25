@@ -73,7 +73,7 @@ else:
       </div>
       <h1 className="page-title">Linear Search</h1>
       <div className="section-box">
-        <h2 className="section-title">Linear Search: Definition</h2>
+        <h2 className="section-title">Linear Search: Definition Bhavya Patel</h2>
         <p>Linear Search is a fundamental searching algorithm used to locate a specific element within a list. It works by iterating through the list sequentially, comparing each element with the target element we're searching for.</p>
       </div>
       <div className="section-box">
